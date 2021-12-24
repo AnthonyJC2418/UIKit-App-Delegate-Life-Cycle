@@ -1,1 +1,1 @@
-# UIKit-App-Delegate-Life-Cycle
+# Use foreground transitions to prepare your app’s UI to appear onscreen. An app's transition to the foreground is usually in response to a user action. For example, when the user taps the app’s icon, the system launches the app and brings it to the foreground. Use a foreground transition to update your app’s UI, acquire resources, and start the services you need to handle user requests.
