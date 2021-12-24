@@ -1,0 +1,20 @@
+# This is a basic workflow to help you get started with Actions
+jobs:
+  example-job:
+    runs-on: [self-hosted, linux, x64, gpu]
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./setup_server.sh
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./build_server.sh
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./test_server.sh
+For more information, see jobs.<job_id>.needs.
